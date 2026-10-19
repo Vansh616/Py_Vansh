@@ -14,7 +14,7 @@ while a == "y":
         print("Hope we see you again!!")
         break
     elif a != "y" or a != "n":
-        print("Thanks for playing!")
+        print("Invalid Option , run the program again!")
         break
     
 print("Goodbye!")
