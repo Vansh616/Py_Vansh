@@ -5,21 +5,36 @@ print(
     "Please enter a phone number to check if it is a possible mobile number in India, Australia, or New Zealand."
 )
 
-# Loop until a valid phone number is entered
+# Get user input for the phone number
 while True:
-    # First input a phone number
     ph_num = input("Enter a phone number: ").strip()
 
-    # Check if the phone number is valid (i.e., it should be at least 9 digits long and contain only digits)
-    if len(ph_num) <= 9 or not ph_num.isdigit():
-        print("Invalid input. Please enter a valid phone number: ")
+    # Remove spaces and hyphens from the phone number
+    ph_num = ph_num.replace(" ", "").replace("-", "")
+
+    # Remove the country code if present
+    if ph_num.startswith("+91"):
+        ph_num = ph_num[3:]
+
+    elif ph_num.startswith("+61"):
+        ph_num = "0" + ph_num[3:]
+
+    elif ph_num.startswith("+64"):
+        ph_num = "0" + ph_num[3:]
+
+    # Validate the input to ensure it is a valid phone number
+    if not ph_num.isdigit():
+        print("Invalid input. Only digits are allowed.")
+
+    elif len(ph_num) <= 9:
+        print("Invalid input. Phone number is too short.")
 
     else:
         break
 
 
 # Check if the phone number is a possible mobile number in India, Australia, or New Zealand
-def detect_phone_number(ph_num):
+def detect_phone_number(ph_num: int):
 
     # Check for India
     if len(ph_num) == 10 and ph_num[0] in "6789":
@@ -39,7 +54,7 @@ def detect_phone_number(ph_num):
 
     else:
         return (
-            "Could not match this number with our countries currently supported.",
+            "Number format not recognized. Please check the number and run the program again.",
             None,
         )
 
