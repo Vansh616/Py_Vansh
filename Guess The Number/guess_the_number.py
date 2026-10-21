@@ -1,20 +1,21 @@
 # Number Guessing Game
 import random
 
-print("Welcome to the Number Guessing Game!")
+# Function to guess a number between 1 and x
+def guess(x):
+    random_number = random.randint(1, x)
+    guess = 0
 
-number = random.randint(1, 100)
-guess = 0
+    # Keep asking the user to guess until they get it right
+    while guess != random_number:
+        guess = int(input(f"Guess a number between 1 and {x}: "))
 
-while guess != number:
-    guess = int(input("Guess a number between 1 and 100: "))
+        if guess < random_number:
+            print("Sorry, guess again. Too low.")
 
-    if guess < number:
-        print("Too low! Try again.")
-    elif guess > number:
-        print("Too high! Try again.")
-    else:
-        print("Congratulations! You've guessed the number.")
-        break
+        elif guess > random_number:
+            print("Sorry, guess again. Too high.")
 
-print(f"The number was: {number}")
+    print(f"Yay! Congrats. You have guessed the number {random_number} correctly!")
+    
+guess(100)
