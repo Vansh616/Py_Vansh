@@ -28,6 +28,7 @@ python rock_paper_scissors.py
 
 ## Concepts Practiced
 
+- Python functions
 - Python's `random` module and `random.choice()`
 - Lists and dictionaries
 - `while` loop
