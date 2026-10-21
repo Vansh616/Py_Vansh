@@ -44,10 +44,28 @@ A simple command-line game where you play Rock Paper Scissors against the comput
 - Python's `random` module and `random.choice()`
 - Lists and dictionaries
 - User input and validation
+- Functions
 - `while` loops and conditional statements
 - f-strings and emojis
 
 **Status:** ✅ Completed — Beginner Version
+
+### 🔢 Number Guessing Game
+
+A simple command-line game where the computer picks a random number between 1 and 100, and the player tries to guess it.
+
+**Features:**
+- Generate a random number between 1 and 100.
+- Get hints when the guess is too high or too low.
+- Keep guessing until the correct number is found.
+
+**Concepts Practiced:**
+- Python's `random` module and `random.randint()`
+- User input and type conversion
+- `while` loops
+- Conditional statements (`if`, `elif`, `else`)
+
+**Status:** 🚧 In Progress — Improvements in Progress
 
 More projects will be added as I continue learning Python.
 
