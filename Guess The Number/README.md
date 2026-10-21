@@ -1,4 +1,4 @@
-# 🔢 Number Guessing Game
+# 🔢 Guess The Number
 
 A simple command-line number guessing game built using Python. The computer randomly picks a number between 1 and 100, and the player tries to guess it.
 
